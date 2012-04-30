@@ -26,7 +26,10 @@ app.configure('production', function(){
 //
 
 app.get('/', function(req, res){
-  res.send('here');
+  res.render('index', {layout: true,
+    locals: {
+      title: 'Landmark coasters'
+    }});
 });
 
 
