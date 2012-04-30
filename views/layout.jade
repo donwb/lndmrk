@@ -3,8 +3,22 @@ html
     head
         title= title
 
-    body
+        link(href="/stylesheets/base.css", rel="stylesheet")
+        link(href="/stylesheets/layout.css", rel="stylesheet")
+        link(href="/stylesheets/skeleton.css", rel="stylesheet")
+        link(href="/stylesheets/site.css", rel="stylesheet")
 
-        div!= body
+        link(rel="shortcut icon", href="/images/favicon.ico")
+        link(rel="apple-touch-icon", sizes="72x72", href="/images/apple-touch-icon-72x72.png")
+        link(rel="apple-touch-icon", href="/images/apple-touch-icon.png")
+        link(rel="apple-touch-icon", sizes="114x114", href="/images/apple-touch-icon-114x114.png")
+
+    body
+        script(src="javascripts/jquery.js")
+        script(src="javascripts/tabs.js")
+
+        div.container
+
+            div!= body
 
         

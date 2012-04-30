@@ -18,7 +18,6 @@ ImageProvider = function(){};
 
 ImageProvider.prototype.getImages = function(callback) {
     Img.find({}, function(err, images){
-        console.info(images);
         callback(null, images);
     })
 };

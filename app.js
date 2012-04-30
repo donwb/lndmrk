@@ -31,8 +31,7 @@ app.configure('production', function(){
 
 app.get('/', function(req, res){
   ImageProvider.getImages(function(err, images){
-    console.log(images);
-    
+
     res.render('index', {layout: true,
     locals: {
       title: 'Landmark coasters',
