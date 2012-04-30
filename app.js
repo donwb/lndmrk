@@ -2,6 +2,10 @@ var express = require('express');
 var app = module.exports = express.createServer();
 
 
+var ImageProvider = require('./ImageProvider').ImageProvider;
+var ImageProvider =  new ImageProvider();
+
+
 // config shit
 var pub = __dirname + '/public';
 
@@ -26,10 +30,16 @@ app.configure('production', function(){
 //
 
 app.get('/', function(req, res){
-  res.render('index', {layout: true,
+  ImageProvider.getImages(function(err, images){
+    console.log(images);
+    
+    res.render('index', {layout: true,
     locals: {
-      title: 'Landmark coasters'
+      title: 'Landmark coasters',
+      images: images
     }});
+  })
+  
 });
 
 
