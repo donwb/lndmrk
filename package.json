@@ -1,0 +1,24 @@
+{
+  "author": "Don Browning <don.browning@turner.com>",
+  "name": "lndmrk",
+  "description": "Landmark Squares website",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/donwb/lndmrk.git"
+  },
+  "main": "app.js",
+  "engines": {
+    "node": "~0.6.10"
+  },
+  "dependencies": {
+    "express": "latest",
+    "express-messages": "latest",
+    "jade": "~0.25.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "app.js"
+  },
+  "subdomain": "lndmrk"
+}
