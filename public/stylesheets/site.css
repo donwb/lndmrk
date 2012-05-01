@@ -5,3 +5,9 @@ body {
     font-size: 13px;
 }
 
+.retro {
+	color: #d7ceb2;
+	font: 72px 'Sansita One';
+	text-align: center;
+	text-shadow: 3px 3px 0px #393D48, 6px 6px 0px #5c5f72;
+}
