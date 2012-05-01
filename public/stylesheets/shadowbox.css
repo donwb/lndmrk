@@ -2,13 +2,13 @@
 
 ul {
     list-style: none;
-    width: 570px;
+    width: 650px;
     margin: 40px auto;
 }
 
 li {
-    width: 120px;
-    height: 125px;
+    width: 140px;
+    height: 145px;
     float: left;
     background: #CDC5B2;
     margin: 0 40px 40px 0;
@@ -24,11 +24,17 @@ li {
 }
 li h1 {
     font-size: 16px;
-    margin: 0 0 10px 0;
+    margin: -20px 0 10px 0;
     color: #4E3E30;
 }
 li p {
     color: gray;
+}
+
+li img {
+    width: 138px;
+    height: 130px;
+    margin: -25px 0 0 0;
 }
 
 ul li:hover {
