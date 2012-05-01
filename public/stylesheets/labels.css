@@ -24,6 +24,8 @@
     text-shadow: -1px -1px 0 rgba(0,0,0,0.2);
 }
 
+
+
 .label.default {
     background: -webkit-linear-gradient(top, #F1F1F1, #E8D9D9);
     background: -moz-linear-gradient(top, #F1F1F1, #E8D9D9);
@@ -196,3 +198,8 @@
     text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
     color: #666200;
 }
+
+.label .anchor {
+    text-decoration: none;
+}
+
