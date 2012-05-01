@@ -1,12 +1,12 @@
 
 
-ul {
+.shadowbox ul {
     list-style: none;
     width: 940px;
     margin: 40px auto;
 }
 
-li {
+.shadowbox li {
     width: 140px;
     height: 145px;
     float: left;
@@ -22,22 +22,22 @@ li {
     -o-transition: .3s;
     transition: .3s;
 }
-li h1 {
+.shadowbox li h1 {
     font-size: 16px;
     margin: -20px 0 10px 0;
     color: #4E3E30;
 }
-li p {
+.shadowbox li p {
     color: gray;
 }
 
-li img {
+.shadowbox li img {
     width: 138px;
     height: 130px;
     margin: -25px 0 0 0;
 }
 
-ul li:hover {
+.shadowbox ul li:hover {
     border: 5px solid white;
     
     -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
@@ -47,7 +47,7 @@ ul li:hover {
     opacity: 1;
     filter: alpha(opacity=100);
 }
-ul:hover li:not(:hover) {
+.shadowbox ul:hover li:not(:hover) {
     opacity: .3;
     filter: alpha(opacity=30);
     
