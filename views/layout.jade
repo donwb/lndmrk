@@ -22,32 +22,18 @@ html
 
         div.container
             div.retro Landmark Squares
-            div.menubar
-                ul
-                    li
-                        | <a>Home</a>
-                    li
-                        | <a>Coasters</a>
-                    li
-                        | <a>About Us</a>
+            div.row
+                div(class="sixteen columns")
+                    div.menubar
+                        ul
+                            li
+                                | <a>Home</a>
+                            li
+                                | <a>Products</a>
+                            li
+                                | <a>About Us</a>
 
-            div!= body
-
-            div.labelContainer
-                | <span class="label default"><a href="#">Atlanta</a></span>
-                | <span class="label orangish"><a href="#">Decatur</a></span>
-                | <span class="label orange"><a href="#">Cabbagetown</a></span>
-                | <span class="label green"><a href="#">Candler Park</a></span>
-                | <span class="label pink"><a href="#">Oakhurst</a></span>
-                | <span class="label lightyellow"><a href="#">VaHi</a></span>
-                | <span class="label black"><a href="#" class="anchor">Avondale</a></span>
-                | <span class="label brown"><a href="#">ittle 5 Points</a></span>
-                | <span class="label darkgreen"><a href="#">Inman Park</a></span>
-                | <span class="label yellow"><a href="#">Kirkwood</a></span>
-                | <span class="label red"><a href="#">rant Park</a></span>
-                | <span class="label skyblue"><a href="#">Marietta</a></span>
-                | <span class="label darkblue"><a href="#">Ansley Park</a></span>
-                | <span class="label orangish"><a href="#">Berkeley Park</a></span>
-                | <span class="label seagreen"><a href="#">East Atlanta</a></span>
-
+            div.row
+                div!= body
+            
 
