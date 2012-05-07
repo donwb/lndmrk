@@ -9,6 +9,7 @@ html
         link(href="/stylesheets/shadowbox.css", rel="stylesheet")
         link(href="/stylesheets/menu.css", rel="stylesheet")
         link(href="/stylesheets/labels.css", rel="stylesheet")
+        link(href="/stylesheets/modal.css", rel="stylesheet")
         link(href="/stylesheets/site.css", rel="stylesheet")
         link(href="http://fonts.googleapis.com/css?family=Sansita+One", rel="stylesheet")
         link(rel="shortcut icon", href="/images/favicon.ico")
@@ -19,6 +20,19 @@ html
     body
         script(src="javascripts/jquery.js")
         script(src="javascripts/tabs.js")
+        script(src="javascripts/modal.js")
+        script
+            $(function()
+            {
+                var m = $('body').modal().data('modal');
+
+                $(document).on('click', '.js-open', function(){
+                        var content = document.getElementsByClassName('stuff')[0].innerHTML;
+                        console.log(content);
+                        m.open(content);
+                    })
+
+                });
 
         div.container
             div.retro Landmark Squares
@@ -27,7 +41,7 @@ html
                     div.menubar
                         ul
                             li
-                                | <a>Home</a>
+                                | <a class="js-open">Home</a>
                             li
                                 | <a>Products</a>
                             li
@@ -36,4 +50,6 @@ html
             div.row
                 div!= body
             
+
+                div.stuff This is some content
 
