@@ -30,8 +30,7 @@ app.configure('production', function(){
 //
 
 app.get('/', function(req, res){
-  ImageProvider.getImages(function(err, images){
-
+  ImageProvider.pageImages(0, 4, function(err, images){
     res.render('index', {layout: true,
     locals: {
       title: 'Landmark coasters',
@@ -41,6 +40,19 @@ app.get('/', function(req, res){
   
 });
 
+app.get('/:pagenum', function(req, res){
+  // need some error checking for input param
+  
+  var next = ((req.params.pagenum - 1) * 4);
+  ImageProvider.pageImages(next, 4, function(err, images){
+    res.render('index', {layout: true,
+      locals: {
+        title: 'Landmark Coasters',
+        images: images
+      }});
+  })
+
+});
 
 var port = process.env.PORT || 3000;
 if(!module.parent){
