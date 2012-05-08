@@ -29,17 +29,6 @@ app.configure('production', function(){
 
 //
 
-app.get('/', function(req, res){
-  ImageProvider.pageImages(0, 4, function(err, images){
-    res.render('index', {layout: true,
-    locals: {
-      title: 'Landmark coasters',
-      images: images
-    }});
-  })
-  
-});
-
 app.get('/:pagenum', function(req, res){
   // need some error checking for input param
   
@@ -52,6 +41,26 @@ app.get('/:pagenum', function(req, res){
       }});
   })
 
+});
+
+app.get('/detail/:id', function(req, res){
+  res.render('detail', {
+    layout: false,
+      locals: {
+        title: 'hey'
+      }
+  });
+});
+
+app.get('/', function(req, res){
+  ImageProvider.pageImages(0, 4, function(err, images){
+    res.render('index', {layout: true,
+    locals: {
+      title: 'Landmark coasters',
+      images: images
+    }});
+  })
+  
 });
 
 var port = process.env.PORT || 3000;

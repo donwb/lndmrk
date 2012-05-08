@@ -24,15 +24,38 @@ html
         script
             $(function()
             {
+                $('.image').click(function(){
+                    console.log(this.id);
+                    })
+
                 var m = $('body').modal().data('modal');
 
                 $(document).on('click', '.js-open', function(){
-                        var content = document.getElementsByClassName('stuff')[0].innerHTML;
-                        console.log(content);
-                        m.open(content);
-                    })
+                        $.ajax({
+                            url: "/detail/1",
+                            success: function(data) {
+                                console.log(data);
+                                m.open(data);
+                            }
+                        })
+                    }
+                )
 
-                });
+            });
+
+            function loadWindow(imageName){
+                var m = $('body').modal().data('modal');
+
+                
+                $.ajax({
+                    url: "/detail/1",
+                    success: function(data) {
+                        console.log(data);
+                        m.open(data);
+                    }
+                })
+                
+            }
 
         div.container
             div.retro Landmark Squares

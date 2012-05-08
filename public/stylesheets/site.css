@@ -38,3 +38,12 @@ body {
 .spots {
 	margin-top: -190px;
 }
+
+.detail p {
+	color: black;
+}
+
+.detail h3 {
+	color: black;
+	font-size: 15px;
+}
