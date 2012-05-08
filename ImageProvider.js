@@ -31,5 +31,12 @@ ImageProvider.prototype.pageImages = function(s, l, callback) {
     })
 };
 
+ImageProvider.prototype.getImageByName = function(imageName, callback){
+    Img.findOne({name: imageName}, function(err, image){
+        callback(null, image);
+    });
+};
+
+
 exports.ImageProvider = ImageProvider;
 

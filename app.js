@@ -32,8 +32,8 @@ app.configure('production', function(){
 app.get('/:pagenum', function(req, res){
   // need some error checking for input param
   
-  var next = ((req.params.pagenum - 1) * 4);
-  ImageProvider.pageImages(next, 4, function(err, images){
+  var next = ((req.params.pagenum - 1) * 12);
+  ImageProvider.pageImages(next, 12, function(err, images){
     res.render('index', {layout: true,
       locals: {
         title: 'Landmark Coasters',
@@ -43,17 +43,26 @@ app.get('/:pagenum', function(req, res){
 
 });
 
-app.get('/detail/:id', function(req, res){
-  res.render('detail', {
+app.get('/detail/:imageName', function(req, res){
+  
+  var imageName = req.params.imageName;
+  console.log(imageName);
+
+  ImageProvider.getImageByName(imageName, function(err, image){
+    console.log(image);
+
+    res.render('detail', {
     layout: false,
       locals: {
-        title: 'hey'
+        img: image
       }
+    });
   });
+  
 });
 
 app.get('/', function(req, res){
-  ImageProvider.pageImages(0, 4, function(err, images){
+  ImageProvider.pageImages(0, 12, function(err, images){
     res.render('index', {layout: true,
     locals: {
       title: 'Landmark coasters',

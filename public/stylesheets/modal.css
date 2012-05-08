@@ -33,4 +33,5 @@
 		z-index:320;
 		font-size:.75em;
 		cursor:pointer;
+		background-image: url(../images/dialog_close.png);
 	}

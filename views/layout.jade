@@ -25,35 +25,20 @@ html
             $(function()
             {
                 $('.image').click(function(){
-                    console.log(this.id);
-                    })
-
-                var m = $('body').modal().data('modal');
-
-                $(document).on('click', '.js-open', function(){
-                        $.ajax({
-                            url: "/detail/1",
-                            success: function(data) {
-                                console.log(data);
-                                m.open(data);
-                            }
-                        })
-                    }
-                )
-
+                    loadWindow(this.id);
+                });
             });
 
             function loadWindow(imageName){
                 var m = $('body').modal().data('modal');
 
-                
                 $.ajax({
-                    url: "/detail/1",
+                    url: "/detail/" + imageName,
                     success: function(data) {
                         console.log(data);
                         m.open(data);
                     }
-                })
+                });
                 
             }
 

@@ -39,6 +39,9 @@ body {
 	margin-top: -190px;
 }
 
+.detail {
+	color: black;
+}
 .detail p {
 	color: black;
 }
@@ -47,3 +50,12 @@ body {
 	color: black;
 	font-size: 15px;
 }
+
+.detail .close {
+	padding-left: 590px;
+	padding-top: -60px;
+}
+
+
+
+
