@@ -11,8 +11,9 @@ div.row
         div.tags
             div.tag-text Tags
             each tag in tags
+                | <a href="/tag/#{tag.name}">
                 div.tag
                     span.name= tag.name
                     span.tag-line
                     span.count 22
-           
+                | </a>

@@ -37,6 +37,12 @@ ImageProvider.prototype.getImageByName = function(imageName, callback){
     });
 };
 
+ImageProvider.prototype.getImagesByTagname = function(tagname, callback){
+    Img.find({"tags":tagname}, function(err, images){
+        callback(null, images);
+    });
+};
+
 
 exports.ImageProvider = ImageProvider;
 

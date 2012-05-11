@@ -30,7 +30,7 @@ app.configure('production', function(){
 
 //
 
-app.get('/:pagenum', function(req, res){
+app.get('/p/:pagenum', function(req, res){
   // need some error checking for input param
   
   var next = ((req.params.pagenum - 1) * 12);
@@ -55,11 +55,40 @@ app.get('/detail/:imageName', function(req, res){
     res.render('detail', {
     layout: false,
       locals: {
-        img: image
-      }
+        img: image }
     });
   });
   
+});
+
+app.get('/tag/:tagName', function(req, res) {
+    var tagname = req.params.tagName;
+    console.log(tagname);
+
+    ImageProvider.getImagesByTagname(tagname, function(err, images) {
+        TagProvider.getTags(function(err, tags){
+            res.render('index', {
+            layout: true, locals: {
+                title: tagname + ' images',
+                tags: tags,
+                images: images
+            }
+            });
+        });
+        
+    });
+
+});
+
+app.get('/admin', function(req, res){
+    TagProvider.getTags(function(err, tags){
+        res.render('admin', {layout: true,
+        locals: {
+            title: 'admin',
+            tags: tags
+        }});
+    })
+    
 });
 
 app.get('/', function(req, res) {
@@ -77,6 +106,23 @@ app.get('/', function(req, res) {
 
     });
 
+});
+
+app.post('/admin/tag/add', function(req, res){
+    console.log(req.body.tag);
+    TagProvider.Save(req.body.tag, function(err){
+        res.redirect('/admin');
+    })
+});
+
+// totally understand this should be a post..
+app.get('/admin/tag/delete/:tagname', function(req, res) {
+    var tagname = req.params.tagname;
+    console.log(tagname);
+
+    TagProvider.Delete(tagname, function(err){
+        res.redirect('/admin');
+    })
 });
 
 var port = process.env.PORT || 3000;

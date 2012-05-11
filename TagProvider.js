@@ -20,5 +20,24 @@ TagProvider.prototype.getTags = function(callback) {
     })
 }
 
+TagProvider.prototype.Save = function(tag, callback) {
+    var t = new Tag();
+    t.name = tag;
+
+    t.save(function(err) {
+        callback(err);
+    })
+
+};
+
+TagProvider.prototype.Delete = function(tag, callback) {
+    Tag.find({ "name": tag }, function(err, tags) {
+        tags.forEach(function(t) {
+            t.remove();
+            callback(null);
+        })
+    })
+};
+
 
 exports.TagProvider = TagProvider;

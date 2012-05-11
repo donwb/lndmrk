@@ -84,3 +84,16 @@ body {
     padding: 0 6px 0 6px;
 }
 
+
+.admin .tags ul {
+    color:  #d7ceb2;
+}
+
+.admin .tags .del-link {
+    padding-left: 10px;
+    color: #808080;
+}
+
+.admin .tags .del-link:hover {
+    color:  #d7ceb2;
+}

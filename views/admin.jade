@@ -1,0 +1,16 @@
+div.row
+    div.admin
+        div.tags
+            div(class="eight columns")
+                form(method="post", action="/admin/tag/add")
+                    label New Tag:
+                        input(type="text", name="tag")
+
+                    input(type="submit", value="Add")
+
+            div(class="eight columns")
+                ul
+                    each tag in tags
+                        li= tag.name 
+                            span <a class="del-link" href="/admin/tag/delete/#{tag.name}">D</a>
+
