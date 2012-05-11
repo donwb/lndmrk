@@ -25,16 +25,6 @@ body {
     font-family: 'Helvetica Neue', sans-serif;
 }
 
-
-.hoods {
-
-}
-
-.tagHeadline {
-	font-size: 16px;
-	text-align: center;
-}
-
 .spots {
 	margin-top: -190px;
 }
@@ -62,20 +52,23 @@ body {
 }
 
 .tags .tag-text {
-    font-weight: bolder;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
 }
 
 .tags .tag {
     font-size: 11px;
-    margin: 4px 5px 5px 15px;
+    margin: 1px 5px 5px 15px;
     float: left;
     background: #4E3E30;
     color:  white;
-    border-top: 1px solid #CDC5B2;
-    border-bottom: 1px solid #CDC5B2;
-    border-right: 1px solid #CDC5B2;
-    border-left: 1px solid #CDC5B2;
-    
+    border: 1px solid #CDC5B2;
+}
+
+.tags .tag:hover {
+    background-color: #d7ceb2;
+    color: #4E3E30;
 }
 
 .tags .name {
