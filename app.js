@@ -4,7 +4,8 @@ var app = module.exports = express.createServer();
 
 var ImageProvider = require('./ImageProvider').ImageProvider;
 var ImageProvider =  new ImageProvider();
-
+var TagProvider = require('./TagProvider').TagProvider;
+var TagProvider = new TagProvider();
 
 // config shit
 var pub = __dirname + '/public';
@@ -61,15 +62,21 @@ app.get('/detail/:imageName', function(req, res){
   
 });
 
-app.get('/', function(req, res){
-  ImageProvider.pageImages(0, 12, function(err, images){
-    res.render('index', {layout: true,
-    locals: {
-      title: 'Landmark coasters',
-      images: images
-    }});
-  })
-  
+app.get('/', function(req, res) {
+    ImageProvider.pageImages(0, 12, function(err, images) {
+        TagProvider.getTags(function(err, tags) {
+        
+            res.render('index', { layout: true,
+                locals: {
+                    title: 'Landmark coasters',
+                    tags: tags,
+                    images: images
+                }
+            });
+        });
+
+    });
+
 });
 
 var port = process.env.PORT || 3000;

@@ -1,45 +1,18 @@
 
 div.row
-    div(class="sixteen columns")
+    div(class="thirteen columns")
         div.shadowbox
             ul
                 each img in images
                     li(class="image", id="#{img.name}")
                         h1= img.name
                         img(src="#{img.filename}")
-
-div.row
-    div(class="sixteen columns")
-        div.offset-by-one
-            div.hoods
-                div.labelContainer
-                    div.tagHeadline Neighborhoods
-                    | <a href="#"><span class="label default">Atlanta</span></a>
-                    | <a href="#"><span class="label orangish">Decatur</span></a>
-                    | <a href="#"><span class="label orange">Cabbagetown</span></a>
-                    | <a href="#"><span class="label green">Candler Park</span></a>
-                    | <a href="#"><span class="label pink">Oakhurst</span></a>
-                    | <a href="#"><span class="label lightyellow">VaHi</span></a>
-                    | <a href="#"><span class="label black">Avondale</span></a>
-                    | <a href="#"><span class="label brown">Little 5 Points</span></a>
-                    | <a href="#"><span class="label darkgreen">Inman Park</span></a>
-                    | <a href="#"><span class="label yellow">Kirkwood</span></a>
-                    | <a href="#"><span class="label red">rant Park</span></a>
-                    | <a href="#"><span class="label skyblue">Marietta</span></a>
-                    | <a href="#"><span class="label darkblue">Ansley Park</span></a>
-                    | <a href="#"><span class="label orangish">Berkeley Park</span></a>
-                    | <a href="#"><span class="label seagreen">East Atlanta</span></a>
-        div.offset-by-seven
-            div.spots
-                div.labelContainer
-                    div.tagHeadline Spots
-                    | <a href="#"><span class="label default">Bars</span></a>
-                    | <a href="#"><span class="label orangish">Restaurants</span></a>
-                    | <a href="#"><span class="label orange">Parks</span></a>
-                    | <a href="#"><span class="label green">Signs</span></a>
-                    | <a href="#"><span class="label pink">Shops</span></a>
-                    | <a href="#"><span class="label green">Nighttime</span></a>
-                    | <a href="#"><span class="label pink">Daytime</span></a>
-                    
-                    
-
+    div(class="three columns")
+        div.tags
+            div.tag-text Tags
+            each tag in tags
+                div.tag
+                    span.name= tag.name
+                    span.tagline
+                    span.count 22
+           

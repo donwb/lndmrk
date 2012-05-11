@@ -57,5 +57,37 @@ body {
 }
 
 
+.tags {
+    color:  white;
+}
 
+.tags .tag-text {
+    font-weight: bolder;
+}
+
+.tags .tag {
+    font-size: 11px;
+    margin: 4px 5px 5px 15px;
+    float: left;
+    background: #4E3E30;
+    color:  white;
+    border-top: 1px solid #CDC5B2;
+    border-bottom: 1px solid #CDC5B2;
+    border-right: 1px solid #CDC5B2;
+    border-left: 1px solid #CDC5B2;
+    
+}
+
+.tags .name {
+    padding: 20px 6px 0 6px;
+}
+
+.tags .tag-line {
+    border-left: 1px solid #CDC5B2;
+    line-height: 17px
+}
+
+.tags .count {
+    padding: 0 6px 0 6px;
+}
 
