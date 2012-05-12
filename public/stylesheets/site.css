@@ -84,11 +84,13 @@ body {
     padding: 0 6px 0 6px;
 }
 
-
 .admin .tags ul {
     color:  #d7ceb2;
 }
 
+.admin .tags li {
+    margin-top: -9px;
+}
 .admin .tags .del-link {
     padding-left: 10px;
     color: #808080;

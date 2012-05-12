@@ -92,17 +92,17 @@ app.get('/admin', function(req, res){
 });
 
 app.get('/', function(req, res) {
-    ImageProvider.pageImages(0, 12, function(err, images) {
-        TagProvider.getTags(function(err, tags) {
-        
-            res.render('index', { layout: true,
-                locals: {
-                    title: 'Landmark coasters',
-                    tags: tags,
-                    images: images
-                }
-            });
-        });
+  ImageProvider.pageImages(0, 12, function(err, images) {
+    TagProvider.getTags(function(err, tags) {
+    
+      res.render('index', { layout: true,
+          locals: {
+              title: 'Landmark coasters',
+              tags: tags,
+              images: images
+          }
+      });
+    });
 
     });
 

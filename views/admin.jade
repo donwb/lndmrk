@@ -14,3 +14,26 @@ div.row
                         li= tag.name 
                             span <a class="del-link" href="/admin/tag/delete/#{tag.name}">D</a>
 
+hr
+
+div.row
+    div.admin
+        div.images
+            div(class="four columns")
+                form(method="post", action="/admin/images/add")
+                    label Name:
+                        input(type="text", name="name")
+                    label Description:
+                        input(type="text", name="description")
+                    label Filename:
+                        input(type="text", name="filename")
+                    label Tags:
+                        select(name="tags", size="10", multiple="multiple")
+                            each tag in tags
+                                option(value="#{tag.name}")= tag.name
+                    input(type="submit", value="Save")
+            div(class="twelve columns")
+                div.offset-by-one
+                    ul
+                        li Double Clermont
+                        li Chairs
