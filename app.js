@@ -35,11 +35,15 @@ app.get('/p/:pagenum', function(req, res){
   
   var next = ((req.params.pagenum - 1) * 12);
   ImageProvider.pageImages(next, 12, function(err, images){
-    res.render('index', {layout: true,
+    TagProvider.getTags(function(err, tags){
+      res.render('index', {layout: true,
       locals: {
         title: 'Landmark Coasters',
+        tags: tags,
         images: images
       }});
+    })
+    
   })
 
 });
@@ -81,14 +85,16 @@ app.get('/tag/:tagName', function(req, res) {
 });
 
 app.get('/admin', function(req, res){
+  ImageProvider.getImages(function(err, images){
     TagProvider.getTags(function(err, tags){
         res.render('admin', {layout: true,
         locals: {
             title: 'admin',
+            images: images,
             tags: tags
         }});
-    })
-    
+    });
+  });
 });
 
 app.get('/', function(req, res) {
@@ -123,6 +129,22 @@ app.get('/admin/tag/delete/:tagname', function(req, res) {
     TagProvider.Delete(tagname, function(err){
         res.redirect('/admin');
     })
+});
+
+app.post('/admin/images/add', function(req, res){
+  var name = req.body.name;
+  var description = req.body.description;
+  var filename = req.body.filename;
+  var tags = req.body.tags;
+
+  console.log(name, description, filename, tags);
+
+  ImageProvider.save(name, description, filename, tags, function(err){
+    if(err) console.log('shit' + err);
+
+    res.redirect('/admin');
+
+  })
 });
 
 var port = process.env.PORT || 3000;

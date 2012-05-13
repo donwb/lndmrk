@@ -43,6 +43,19 @@ ImageProvider.prototype.getImagesByTagname = function(tagname, callback){
     });
 };
 
+ImageProvider.prototype.save = function(name, description, filename, tags, callback) {
+    var img = new Img();
+
+    img.name = name;
+    img.description = description;
+    img.filename = filename;
+    img.tags = tags;
+
+    img.save(function(err){
+        callback(err);
+    })
+};
+
 
 exports.ImageProvider = ImageProvider;
 

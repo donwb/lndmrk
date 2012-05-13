@@ -99,3 +99,12 @@ body {
 .admin .tags .del-link:hover {
     color:  #d7ceb2;
 }
+
+.admin .images .preview-image {
+    width: 40px;
+    height: 40px;
+}
+
+.admin .images h4 {
+    font-size: 25px;
+}

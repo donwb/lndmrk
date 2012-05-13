@@ -34,6 +34,7 @@ div.row
                     input(type="submit", value="Save")
             div(class="twelve columns")
                 div.offset-by-one
+                    h4 Current Images:
                     ul
-                        li Double Clermont
-                        li Chairs
+                        each img in images
+                            li <img class="preview-image" src="#{img.filename}"></img> #{img.name}
