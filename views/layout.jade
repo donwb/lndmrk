@@ -43,17 +43,19 @@ html
             }
 
         div.container
-            div.retro Landmark Squares
-            div.row
-                div(class="sixteen columns")
-                    div.menubar
-                        ul
-                            li
-                                | <a class="js-open">Home</a>
-                            li
-                                | <a>Products</a>
-                            li
-                                | <a>About Us</a>
+            div(class="seven columns")
+                div.retro Landmark Squares
+            div.offset-by-eight
+                div(class="two columns alpha")
+                    div.nav-text
+                        a(href="/") Home
+                div(class="three columns alpha")
+                    div.nav-text
+                        a(href="/products") Products
+                div(class="two columns alpha")
+                    div.nav-text
+                        a(href="/about") About
+                    
 
             div.row
                 div!= body

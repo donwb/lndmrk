@@ -10,6 +10,29 @@ body {
 	font: 72px 'Sansita One';
 	text-align: center;
 	text-shadow: 3px 3px 0px #393D48, 6px 6px 0px #5c5f72;
+    margin-bottom: 40px;
+}
+
+.nav-text {
+    font-size: 25px;
+    margin-top: 75px;
+    text-align: center;
+}
+
+.nav-text a {
+    color: #d7ceb2;
+    padding: 5px 5px 5px 5px;
+    text-decoration: none;
+}
+
+.nav-text a:hover {
+    padding: 5px 5px 5px 5px;
+    background-color: #d7ceb2;
+    color: #4E3E30;
+    border: 1px solid black;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
 }
 
 .sideInfo ul {
@@ -49,6 +72,7 @@ body {
 
 .tags {
     color:  white;
+    margin-top: 30px;
 }
 
 .tags .tag-text {
