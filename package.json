@@ -2,7 +2,7 @@
   "author": "Don Browning <don.browning@turner.com>",
   "name": "lndmrk",
   "description": "Landmark Squares website",
-  "version": "0.0.1",
+  "version": "0.0.1-1",
   "repository": {
     "type": "git",
     "url": "git://github.com/donwb/lndmrk.git"

@@ -108,6 +108,10 @@ body {
     padding: 0 6px 0 6px;
 }
 
+.admin {
+    margin: 20px 0px 40px 0px;
+}
+
 .admin .tags ul {
     color:  #d7ceb2;
 }
