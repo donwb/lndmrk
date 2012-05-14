@@ -1,4 +1,4 @@
-var db = require('./config/db');
+var db = require('./../config/db');
 var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema, ObjectID = Schema.ObjectId;
