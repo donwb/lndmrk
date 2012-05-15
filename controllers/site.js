@@ -1,11 +1,9 @@
-app = module.parent.exports.app;
-
 var ImageProvider = require('./../models/ImageProvider').ImageProvider;
 var ImageProvider =  new ImageProvider();
 var TagProvider = require('./../models/TagProvider').TagProvider;
 var TagProvider = new TagProvider();
 
-app.get('/p/:pagenum', function(req, res){
+exports.page = function(req, res){
   // need some error checking for input param
   
   var next = ((req.params.pagenum - 1) * 12);
@@ -21,9 +19,9 @@ app.get('/p/:pagenum', function(req, res){
     
   })
 
-});
+};
 
-app.get('/detail/:imageName', function(req, res){
+exports.detail = function(req, res){
   
   var imageName = req.params.imageName;
   console.log(imageName);
@@ -38,9 +36,9 @@ app.get('/detail/:imageName', function(req, res){
     });
   });
   
-});
+};
 
-app.get('/tag/:tagName', function(req, res) {
+exports.tagDetail = function(req, res){
     var tagname = req.params.tagName;
     console.log(tagname);
 
@@ -57,9 +55,9 @@ app.get('/tag/:tagName', function(req, res) {
         
     });
 
-});
+};
 
-app.get('/', function(req, res) {
+exports.index = function(req, res){
   ImageProvider.pageImages(0, 12, function(err, images) {
     TagProvider.getTags(function(err, tags) {
     
@@ -73,5 +71,4 @@ app.get('/', function(req, res) {
     });
 
     });
-
-});
+};

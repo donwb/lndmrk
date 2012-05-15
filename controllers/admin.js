@@ -1,12 +1,10 @@
-app = module.parent.exports.app;
-
 var ImageProvider = require('./../models/ImageProvider').ImageProvider;
 var ImageProvider =  new ImageProvider();
 var TagProvider = require('./../models/TagProvider').TagProvider;
 var TagProvider = new TagProvider();
 
 
-app.get('/admin', function(req, res){
+exports.admin = function(req, res){
   ImageProvider.getImages(function(err, images){
     TagProvider.getTags(function(err, tags){
         res.render('admin', {layout: true,
@@ -17,27 +15,27 @@ app.get('/admin', function(req, res){
         }});
     });
   });
-});
+};
 
 
-app.post('/admin/tag/add', function(req, res){
+exports.addTag = function(req, res){
     console.log(req.body.tag);
     TagProvider.Save(req.body.tag, function(err){
         res.redirect('/admin');
     })
-});
+};
 
 // totally understand this should be a post..
-app.get('/admin/tag/delete/:tagname', function(req, res) {
+exports.deleteTag = function(req, res){
     var tagname = req.params.tagname;
     console.log(tagname);
 
     TagProvider.Delete(tagname, function(err){
         res.redirect('/admin');
     })
-});
+};
 
-app.post('/admin/images/add', function(req, res){
+exports.addImage = function(req, res){
   var name = req.body.name;
   var description = req.body.description;
   var filename = req.body.filename;
@@ -51,4 +49,4 @@ app.post('/admin/images/add', function(req, res){
     res.redirect('/admin');
 
   })
-});
+};

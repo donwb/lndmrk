@@ -32,5 +32,4 @@ if(!module.parent){
 }
 
 module.exports.app = app;
-require('./controllers/site');
-require('./controllers/admin');
+require('./routes');
