@@ -69,7 +69,17 @@ body {
 	padding-top: -60px;
 }
 
+.detail h2 {
+    font-size: 25px;
+    font-family: helvetica;
+    margin: -55px 0 0 0;
+    text-align: center;
+}
 
+.detail img {
+    height: 175px;
+    width: 175px;
+}
 .tags {
     color:  white;
     margin-top: 30px;
