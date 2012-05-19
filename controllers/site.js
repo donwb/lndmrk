@@ -39,8 +39,8 @@ exports.detail = function(req, res){
 };
 
 exports.tagDetail = function(req, res){
-    var tagname = req.params.tagName;
-    console.log(tagname);
+    var tagname = req.params.tagname;
+    console.log('tagname: ' + tagname);
 
     ImageProvider.getImagesByTagname(tagname, function(err, images) {
         TagProvider.getTags(function(err, tags){

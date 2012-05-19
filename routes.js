@@ -9,7 +9,7 @@ var AdminController = require('./controllers/admin');
 app.get('/', SiteController.index);
 app.get('/p/:pagenum', SiteController.page);
 app.get('/detail/:imageName', SiteController.detail);
-app.get('/tag/:tagDetail', SiteController.tagDetail);
+app.get('/tag/:tagname', SiteController.tagDetail);
 
 app.get('/admin', AdminController.admin);
 app.post('/admin/tag/add', AdminController.addTag);
