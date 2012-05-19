@@ -24,36 +24,100 @@ div.row
                 ul#pager
                     li
                         <a href="/">First</a>
-                    li
-                        <a href="#">Prev</a>
-                    li
+                    li#prev
+                        <a href="/">Prev</a>
+                    li#num1
                         <a href="#">1</a>  
-                    li
+                    li#num2
                         <a href="#">2</a>  
+                    li#num3
+                        <a href="#">3</a>
+                    li#num4
+                        <a href="#">4</a>  
+                    li#num5
+                        <a href="#">5</a>  
+                    li#next
+                        <a href="/">Next</a>
                     li
-                        <a href="#">3</a>  
-                    li
-                        <a href="#">Next</a>
-                    li
-                        <a href="#">Last</a> 
+                        <a href="/p/10">Last</a> 
 
 
 script
     //
-    var url = window.location.pathname;
-    console.log(url);
+    var url = window.location.pathname;    
     var activeIdx;
 
+    // Get the current page number
     if(url === '/'){
         activeIdx = 1;
     }else{
-        activeIdx = 2;
+        var lastWhack = url.lastIndexOf('/');
+        var spage = url.substr(lastWhack+1);
+        var pageNumber = parseInt(spage);
+        activeIdx = pageNumber;
     }
 
+    console.log(activeIdx);
+
+    // Set pager count
+    var displayNum1
+        , displayNum2
+        , displayNum3
+        , displayNum4
+        , displayNum5;
+
+    if(activeIdx < 4){
+        displayNum1 = 1;
+        displayNum2 = 2;
+        displayNum3 = 3;
+        displayNum4 = 4;
+        displayNum5 = 5;
+        nextNum = activeIdx + 1;
+        prevNum = (activeIdx === 1) ? 1 : activeIdx - 1;
+    }else{
+        displayNum1 = activeIdx - 2;
+        displayNum2 = activeIdx - 1;
+        displayNum3 = activeIdx;
+        displayNum4 = activeIdx + 1;
+        displayNum5 = activeIdx + 2;
+        nextNum = displayNum4;
+        prevNum = displayNum2;
+    }
+
+    // Set the active button
+    var activeIdx = activeIdx.toString();
+
     $('#pager li').each(function(idx, li){
-        if(activeIdx.toString() === li.innerText){
-            console.log('found it');
+        switch(li.id)
+        {
+            case 'num1':
+                li.innerHTML = '<a href="/p/' + displayNum1 + '">' + displayNum1 + '</a>';
+                break;
+            case 'num2':
+                li.innerHTML = '<a href="/p/' + displayNum2 + '">' + displayNum2 + '</a>';
+                break;
+            case 'num3':
+                li.innerHTML = '<a href="/p/' + displayNum3 + '">' + displayNum3 + '</a>';
+                break;
+            case 'num4':
+                li.innerHTML = '<a href="/p/' + displayNum4 + '">' + displayNum4 + '</a>';
+                break;
+            case 'num5':
+                li.innerHTML = '<a href="/p/' + displayNum5 + '">' + displayNum5 + '</a>';
+                break;
+            case 'prev':
+                li.innerHTML = '<a href="/p/' + prevNum + '">Prev</a>';
+                break;
+            case 'next':
+                li.innerHTML = '<a href="/p/' + nextNum + '">Next</a>';
+                break;
+        }
+
+        if(activeIdx === li.innerText){
             li.className = 'active';
         }
-        console.log(li.innerText);
+        
         })
+
+
+
