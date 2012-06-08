@@ -18,14 +18,19 @@ app.configure(function(){
 // env config
 app.configure('development', function() {
     config.setDevelopmentConfig();
+    console.log('running dev config');
+
     app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 });
 
 app.configure('production', function(){
+  config.setProductionConfig();
+  console.log('running prod config');
+
   app.use(express.errorHandler());
 });
 
-var port = process.env.PORT || config.EnvConfig.port;
+var port = process.env.port || config.EnvConfig.port;
 if(!module.parent){
   app.listen(port);
   console.log("Express server listenting on port " + port);
