@@ -31,6 +31,7 @@ app.configure('production', function(){
 });
 
 var port = process.env.port || config.EnvConfig.port;
+console.log('port: ' + port);
 
 app.listen(port);
 console.log("Express server listenting on port " + port);
