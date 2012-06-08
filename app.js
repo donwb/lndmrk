@@ -31,10 +31,10 @@ app.configure('production', function(){
 });
 
 var port = process.env.port || config.EnvConfig.port;
-if(!module.parent){
-  app.listen(port);
-  console.log("Express server listenting on port " + port);
-}
+
+app.listen(port);
+console.log("Express server listenting on port " + port);
+
 
 module.exports.app = app;
 module.exports.config = config;
