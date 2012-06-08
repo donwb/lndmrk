@@ -10,7 +10,14 @@ function setDevelopmentConfig(){
 };
 
 function setProductionConfig(){
-    
+    // These are just examples, insert you info here
+    DatabaseConfig.port = 27617;
+    DatabaseConfig.host = 'dbh61.mongolab.com';
+    DatabaseConfig.name = 'lndmrk';
+    DatabaseConfig.user = 'lndmrk';
+    DatabaseConfig.pass = 'passw0rd';
+
+    EnvConfig.port = 3000;
 }
 
 var DatabaseConfig = {
