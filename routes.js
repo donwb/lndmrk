@@ -16,6 +16,11 @@ app.post('/admin/tag/add', AdminController.addTag);
 app.get('/admin/tag/delete/:tagname', AdminController.deleteTag);
 app.post('/admin/images/add', AdminController.addImage);
 
+// this route is for blitz.io testing
+app.get('/mu-3fb8ca5b-1a109a61-53cb32bd-c47e007e', function(req, res){
+	res.send('42');
+})
+
 //module.exports.config = config;
 //require('./models/ImageProvider');
 //require('./models/TagProvider');
