@@ -59,8 +59,7 @@ exports.tagDetail = function(req, res){
 
 exports.index = function(req, res){
   ImageProvider.pageImages(0, 12, function(err, images) {
-    TagProvider.getTags(function(err, tags) {
-    
+      TagProvider.getTags(function(err, tags) {
       res.render('index', { layout: true,
           locals: {
               title: 'Landmark coasters',

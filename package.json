@@ -12,7 +12,7 @@
     "node": "~0.6.10"
   },
   "dependencies": {
-    "express": "latest",
+    "express": "2.5.9",
     "express-messages": "latest",
     "jade": "~0.25.0",
     "mongoose": "latest"

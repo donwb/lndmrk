@@ -5,7 +5,8 @@ app = module.parent.exports.app;
 
 var SiteController = require('./controllers/site');
 var AdminController = require('./controllers/admin');
-var ProductsController = require('./controllers/products')
+var ProductsController = require('./controllers/products');
+var AboutController = require('./controllers/about');
 
 app.get('/', SiteController.index);
 app.get('/p/:pagenum', SiteController.page);
@@ -18,6 +19,8 @@ app.get('/admin/tag/delete/:tagname', AdminController.deleteTag);
 app.post('/admin/images/add', AdminController.addImage);
 
 app.get('/products', ProductsController.products);
+
+app.get('/about', AboutController.index);
 
 // this route is for blitz.io testing
 app.get('/mu-3fb8ca5b-1a109a61-53cb32bd-c47e007e', function(req, res){
