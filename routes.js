@@ -21,6 +21,7 @@ app.post('/admin/images/add', AdminController.addImage);
 app.get('/products', ProductsController.products);
 
 app.get('/about', AboutController.index);
+app.get('/about/stores', AboutController.stores);
 
 // this route is for blitz.io testing
 app.get('/mu-3fb8ca5b-1a109a61-53cb32bd-c47e007e', function(req, res){
