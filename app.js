@@ -14,7 +14,7 @@ app.configure(function(){
   app.use(express.methodOverride());
   app.use(express.static(pub));
   app.use(app.router);
-  connect().use(require('azure-logstreamer')());
+  app.use(require('azure-logstreamer')());
 });
 
 // env config
