@@ -1,2 +1,3 @@
-node_env: production
+node_env: development
 devErrorsEnabled: true
+loggingEnabled: true
