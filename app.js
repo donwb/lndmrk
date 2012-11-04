@@ -23,8 +23,7 @@ app.configure('development', function() {
 
     app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 
-    var db = config.DatabaseConfig;
-    mongoose.connect('mongodb://' + db.user + ':' + db.pass + '@' + db.host + ':' + db.port + '/' + db.name)
+   
 });
 
 app.configure('production', function(){
@@ -33,8 +32,8 @@ app.configure('production', function(){
 
   app.use(express.errorHandler());
 
-  var db = config.DatabaseConfig;
-    mongoose.connect('mongodb://' + db.user + ':' + db.pass + '@' + db.host + ':' + db.port + '/' + db.name)
+  //var db = config.DatabaseConfig;
+    //mongoose.connect('mongodb://' + db.user + ':' + db.pass + '@' + db.host + ':' + db.port + '/' + db.name)
 });
 
 var port = process.env.port || config.EnvConfig.port;
@@ -43,6 +42,8 @@ console.log('port: ' + port);
 app.listen(port);
 console.log("Express server listenting on port " + port);
 
+ var db = config.DatabaseConfig;
+  mongoose.connect('mongodb://' + db.user + ':' + db.pass + '@' + db.host + ':' + db.port + '/' + db.name)
 
 module.exports.app = app;
 module.exports.config = config;
