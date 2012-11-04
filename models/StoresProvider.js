@@ -10,7 +10,7 @@ var Store = new Schema({
     address	        : {type: String, required: true}
 })
 
-mongoose.connect('mongodb://' + db.user + ':' + db.pass + '@' + db.host + ':' + db.port + '/' + db.name)
+//mongoose.connect('mongodb://' + db.user + ':' + db.pass + '@' + db.host + ':' + db.port + '/' + db.name)
 mongoose.model('Store', Store)
 
 var Store = mongoose.model('Store')

@@ -12,7 +12,8 @@ var Img = new Schema({
     tags			: [String]
 });
 
-mongoose.connect('mongodb://' + db.user + ':' + db.pass + '@' + db.host + ':' + db.port + '/' + db.name);
+///console.log('image provider: ' + mongoose.connect)
+//mongoose.connect('mongodb://' + db.user + ':' + db.pass + '@' + db.host + ':' + db.port + '/' + db.name);
 mongoose.model('Img', Img);
 
 var Img = mongoose.model('Img');

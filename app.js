@@ -1,5 +1,6 @@
 var express = require('express');
 var config = require('./config/config');
+var mongoose = require('mongoose');
 
 var app = module.exports = express.createServer();
 
@@ -21,6 +22,9 @@ app.configure('development', function() {
     console.log('running dev config');
 
     app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
+
+    var db = config.DatabaseConfig;
+    mongoose.connect('mongodb://' + db.user + ':' + db.pass + '@' + db.host + ':' + db.port + '/' + db.name)
 });
 
 app.configure('production', function(){
@@ -28,6 +32,9 @@ app.configure('production', function(){
   console.log('running prod config');
 
   app.use(express.errorHandler());
+
+  var db = config.DatabaseConfig;
+    mongoose.connect('mongodb://' + db.user + ':' + db.pass + '@' + db.host + ':' + db.port + '/' + db.name)
 });
 
 var port = process.env.port || config.EnvConfig.port;
