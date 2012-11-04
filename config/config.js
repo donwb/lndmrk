@@ -17,7 +17,7 @@ function setProductionConfig(){
     DatabaseConfig.user = 'lndmrk';
     DatabaseConfig.pass = 'passw0rd';
 
-    EnvConfig.port = 3000;
+    EnvConfig.port = 80;
 }
 
 var DatabaseConfig = {

@@ -9,7 +9,8 @@ var Tag = new Schema({
     name            : {type: String, required: true}
 });
 
-//mongoose.connect('mongodb://' + db.user + ':' + db.pass + '@' + db.host + ':' + db.port + '/' + db.name);
+mongoose.connection.on('error', function() {});
+mongoose.connect('mongodb://' + db.user + ':' + db.pass + '@' + db.host + ':' + db.port + '/' + db.name);
 mongoose.model('Tag', Tag);
 
 var Tag = mongoose.model('Tag');
