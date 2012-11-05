@@ -15,7 +15,7 @@
     "express": "2.5.9",
     "express-messages": "latest",
     "jade": "~0.25.0",
-    "mongoose": "latest"
+    "mongoose": "2.7.1"
   },
   "devDependencies": {},
   "scripts": {
