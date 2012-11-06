@@ -1,4 +1,4 @@
-config = require('./../config/config');
+config = require('./../config');
 var db = config.DatabaseConfig;
 
 var mongoose = require('mongoose');

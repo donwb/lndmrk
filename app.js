@@ -1,5 +1,5 @@
 var express = require('express');
-var config = require('./config/config');
+var config = require('./config');
 var mongoose = require('mongoose');
 
 var app = module.exports = express.createServer();
