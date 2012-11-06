@@ -7,7 +7,7 @@ var Schema = mongoose.Schema, ObjectID = Schema.ObjectId;
 
 var Img = new Schema({
     name            : {type: String, required: true},
-    description     : {type: String, required: true},
+    description     : {type: String, required: false},
     filename        : {type: String, required: true},
     tags			: [String]
 });

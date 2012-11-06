@@ -28,7 +28,7 @@ div.row
                     label Filename:
                         input(type="text", name="filename")
                     label Tags:
-                        select(name="tags", size="10", multiple="multiple")
+                        select(name="tags", size="30", multiple="multiple")
                             each tag in tags
                                 option(value="#{tag.name}")= tag.name
                     input(type="submit", value="Save")
@@ -37,4 +37,4 @@ div.row
                     h4 Current Images:
                     ul
                         each img in images
-                            li <img class="preview-image" src="#{img.filename}"></img> #{img.name}
+                            li <img class="preview-image" src="/images/coasters/#{img.filename}"></img> #{img.name}
