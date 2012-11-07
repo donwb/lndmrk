@@ -1,3 +1,5 @@
+var logger = require('winston');
+
 var ImageProvider = require('./../models/ImageProvider').ImageProvider;
 var ImageProvider =  new ImageProvider();
 var TagProvider = require('./../models/TagProvider').TagProvider;
@@ -58,15 +60,18 @@ exports.tagDetail = function(req, res){
 };
 
 exports.index = function(req, res){
+  logger.info('in index');
   ImageProvider.pageImages(0, 12, function(err, images) {
+      logger.info('getting tags');
       TagProvider.getTags(function(err, tags) {
-      res.render('index', { layout: true,
-          locals: {
-              title: 'Landmark coasters',
-              tags: tags,
-              images: images
-          }
-      });
+        logger.info('rendering viewe');
+        res.render('index', { layout: true,
+            locals: {
+                title: 'Landmark coasters',
+                tags: tags,
+                images: images
+            }
+        });
     });
 
     });

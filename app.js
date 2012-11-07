@@ -1,8 +1,10 @@
-var express = require('express');
-var config = require('./config');
-var mongoose = require('mongoose');
+var express = require('express'),
+    config = require('./config'),
+    mongoose = require('mongoose'),
+    logger = require('winston');
 
 var app = module.exports = express.createServer();
+logger.info('from winston');
 
 // config shit
 var pub = __dirname + '/public';
@@ -20,7 +22,7 @@ app.configure(function(){
 // env config
 app.configure('development', function() {
     config.setDevelopmentConfig();
-    console.log('running dev config');
+    logger.info('running dev config');
 
     app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 
@@ -29,7 +31,7 @@ app.configure('development', function() {
 
 app.configure('production', function(){
   config.setProductionConfig();
-  console.log('running prod config');
+  logger.info('running prod config');
 
   app.use(express.errorHandler());
 
@@ -38,10 +40,10 @@ app.configure('production', function(){
 });
 
 var port = process.env.port || config.EnvConfig.port;
-console.log('port: ' + port);
+logger.info('port: ' + port);
 
 app.listen(port);
-console.log("Express server listenting on port " + port);
+logger.info("Express server listenting on port " + port);
 
  // var db = config.DatabaseConfig;
  // mongoose.connect('mongodb://' + db.user + ':' + db.pass + '@' + db.host + ':' + db.port + '/' + db.name)
