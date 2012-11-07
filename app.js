@@ -45,8 +45,8 @@ logger.info('port: ' + port);
 app.listen(port);
 logger.info("Express server listenting on port " + port);
 
- // var db = config.DatabaseConfig;
- // mongoose.connect('mongodb://' + db.user + ':' + db.pass + '@' + db.host + ':' + db.port + '/' + db.name)
+ var db = config.DatabaseConfig;
+ mongoose.connect('mongodb://' + db.user + ':' + db.pass + '@' + db.host + ':' + db.port + '/' + db.name)
 
 module.exports.app = app;
 module.exports.config = config;
