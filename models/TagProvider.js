@@ -1,15 +1,18 @@
 config = require('./../config');
 var db = config.DatabaseConfig;
 
+
 var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema, ObjectID = Schema.ObjectId;
 
 var Tag = new Schema({
-    name            : {type: String, required: true}
+    name            : {type: String, required: true},
+    count           : {type: Number}
 });
 
 //mongoose.connection.on('error', function() {});
+
 //mongoose.connect('mongodb://' + db.user + ':' + db.pass + '@' + db.host + ':' + db.port + '/' + db.name);
 mongoose.model('Tag', Tag);
 
@@ -23,6 +26,7 @@ TagProvider.prototype.getTags = function(callback) {
     })
 }
 
+
 TagProvider.prototype.Save = function(tag, callback) {
     var t = new Tag();
     t.name = tag;
@@ -32,6 +36,12 @@ TagProvider.prototype.Save = function(tag, callback) {
     })
 
 };
+
+TagProvider.prototype.Edit = function(tag, callback){
+    tag.save(function(err){
+        callback(tag);
+    })
+}
 
 TagProvider.prototype.Delete = function(tag, callback) {
     Tag.find({ "name": tag }, function(err, tags) {
