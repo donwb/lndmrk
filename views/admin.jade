@@ -1,3 +1,35 @@
+
+div.row
+    div.admin
+        div.tags
+            div(class="eight columns")
+                form(method="post", action="/admin/show/add")
+                    label Date:
+                        input(type="text", name="showDate")
+                    label Name:
+                        input(type="text", name="name", style="width: 400px")
+                    label Location:
+                        input(type="text", name="location", style="width: 400px")
+                    label Link:
+                        input(type="text", name="link", style="width: 400px")
+                    label Year:
+                        select(name="year")
+                            option(value="2012", selected) 2012
+                            option(value="2011") 2011
+                            option(value="2010") 2010
+                            option(value="2009") 2009
+
+                    input(type="submit", value="Save")
+
+            div(class="eight columns")
+                ul(style="height: 250px; overflow: auto")
+                    each show in shows
+                        li= show.name 
+                            span <a class="del-link" href="/admin/tag/delete/#{show.name}">D</a>
+
+hr
+
+
 div.row
     div.admin
         div.tags
@@ -9,7 +41,7 @@ div.row
                     input(type="submit", value="Add")
 
             div(class="eight columns")
-                ul
+                ul(style="height: 250px; overflow: auto")
                     each tag in tags
                         li= tag.name 
                             span <a class="del-link" href="/admin/tag/delete/#{tag.name}">D</a>
@@ -28,13 +60,13 @@ div.row
                     label Filename:
                         input(type="text", name="filename")
                     label Tags:
-                        select(name="tags", size="30", multiple="multiple")
+                        select(name="tags", size="20", multiple="multiple")
                             each tag in tags
                                 option(value="#{tag.name}")= tag.name
                     input(type="submit", value="Save")
             div(class="twelve columns")
                 div.offset-by-one
                     h4 Current Images:
-                    ul
+                    ul(style="height: 350px; overflow: auto")
                         each img in images
                             li <img class="preview-image" src="/images/coasters/#{img.filename}"></img> #{img.name}

@@ -1,8 +1,11 @@
+var logger = require('winston');
+
 var ImageProvider = require('./../models/ImageProvider').ImageProvider;
 var ImageProvider =  new ImageProvider();
 var TagProvider = require('./../models/TagProvider').TagProvider;
 var TagProvider = new TagProvider();
-
+var ShowProvider = require('./../models/ShowProvider').ShowProvider;
+var ShowProvider = new ShowProvider();
 
 exports.admin = function(req, res){
   ImageProvider.getImages(function(err, images){
@@ -11,6 +14,7 @@ exports.admin = function(req, res){
         locals: {
             title: 'admin',
             images: images,
+            shows: [],
             tags: tags
         }});
     });
@@ -50,3 +54,18 @@ exports.addImage = function(req, res){
 
   })
 };
+
+exports.addShow = function(req, res){
+  var date = req.body.showDate,
+      name = req.body.name,
+      location = req.body.location,
+      link = req.body.link,
+      year = req.body.year;
+
+      logger.info(date + ':' + name + ':' + location + ':' + link + ':' + year);
+
+      ShowProvider.addShow({date: date, name: name, location: location, link: link, year: year}, function(err, show){
+        if(err) console.log('shit: ' + err);
+        res.redirect('/admin');
+      });
+}

@@ -22,9 +22,7 @@ var Img = mongoose.model('Img');
 ImageProvider = function(){};
 
 ImageProvider.prototype.getImages = function(callback) {
-    logger.info('getting images');
 	Img.find({}, function(err, images){
-        logger.log('info', 'returned images', images);
 		callback(null, images);
 	})
 };
@@ -33,7 +31,6 @@ ImageProvider.prototype.getImages = function(callback) {
 ImageProvider.prototype.pageImages = function(s, l, callback) {
     logger.info('paging images');
     Img.find({}, ['name', 'description', 'filename', 'tags'] , {skip: s, limit: l}, function(err, images){
-    	logger.log('info', 'Images', images);
         callback(null, images);
     })
 };
