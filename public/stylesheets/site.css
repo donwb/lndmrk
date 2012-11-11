@@ -180,3 +180,54 @@ body {
     width: 100px;
     height: 100px;
 }
+
+.products .years {
+    font-size: 15px;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    margin: 10px;
+}
+
+.products .years a {
+    color: #d7ceb2;
+    padding: 5px 5px 5px 5px;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.products .years a:hover {
+    padding: 5px 5px 5px 5px;
+    background-color: #d7ceb2;
+    color: #4E3E30;
+    border: 1px solid black;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    margin: 10px;
+}
+
+.products .years .selected {
+    padding: 5px 5px 5px 5px;
+    background-color: #d7ceb2;
+    color: #4E3E30;
+    border: 1px solid black;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    margin: 10px;
+}
+
+.products .shows {
+    color: #d7ceb2;
+}
+
+.products .shows .show {
+    font-size: 13px;
+    text-align: center;
+}
+.products .shows .show a {
+    color: white;
+}
+.products hr {
+    margin: 8px 0 11px 0;
+}

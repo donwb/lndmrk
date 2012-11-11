@@ -1,3 +1,8 @@
+script
+	$(document).ready(function(){
+		replaceContent('about');
+		});
+
 div.row
 	div.products
 		div(class="three columns")
@@ -7,33 +12,77 @@ div.row
 				div.type
 					a(href="#", onClick="javascript:replaceContent('stores');return false;") Stores
 				div.type
-					a(href="#", onClick="javascript:replaceContent('shows');return false;") Shows
+					a(href="#", onClick="javascript:replaceContent('shows', 2012);return false;") Shows
 		div(class="thirteen columns")
 			
 			div.offset-by-four
+				div.years
+						a(href="#", onClick="javascript:replaceContent('shows', 2012);return false;", class="selected", id="2012") 2012
+						a(href="#", onClick="javascript:replaceContent('shows', 2011);return false;", id="2011") 2011
+						a(href="#", onClick="javascript:replaceContent('shows', 2010);return false;", id="2010") 2010
+						hr
 				div.content
-					<p>Traci Estes Browning is an internationally collected photographer whose work primarily features national parks and landscapes. The Georgia-based artist grew up on the East Coast immersed in nature with her camera in tow, previously living in a charmingly small coastal town in Florida and in New York City. She spent a decade in the advertising world before freeing herself to pursue photography in 2007. She spent 6 months of the last two years traveling to photograph the majestic and intimate natural places that speak to her soul. She has said she is never more content than when she's out hiking somewhere before the sun comes up.</p>
-
-					<p>Currently a selection of images can be seen at artist co-op Homegrown Decatur and at The Seen Gallery. Additionally new black and white work can be seen at The Big House Gallery during October's Castleberry Hill Art Walk. Last year Traci participated in a joint show at Dolce in Atlantic Station for ecosystM and Type A, and at the Emerging Arts Scene during Atlanta Celebrates Photography. She also participated in a solo show featuring her images of local Atlanta at Taste in Decatur.</p>
-
-					<p>Traci's full portfolio can be seen by appointment or at one of the events listed here.</p>
-		
+					
+					
 
 script
-	function replaceContent(link){
-		var x = $('div.content');
-		var s1 = 'You can find our products at the following locations';
+	function replaceContent(link, year){
+		console.log(link);
 
-		$.ajax({
+		//link = 'test';
+		switch(link)
+		{
+			case 'about':
+				$('div.years').hide();
+				
+				var about1 = "Traci Estes Browning is an internationally collected photographer whose work primarily features national parks and landscapes. The Georgia-based artist grew up on the East Coast immersed in nature with her camera in tow, previously living in a charmingly small coastal town in Florida and in New York City. She spent a decade in the advertising world before freeing herself to pursue photography in 2007. She spent 6 months of the last two years traveling to photograph the majestic and intimate natural places that speak to her soul. She has said she is never more content than when she's out hiking somewhere before the sun comes up.";
+				var about2 = "Currently a selection of images can be seen at artist co-op Homegrown Decatur and at The Seen Gallery. Additionally new black and white work can be seen at The Big House Gallery during October's Castleberry Hill Art Walk. Last year Traci participated in a joint show at Dolce in Atlantic Station for ecosystM and Type A, and at the Emerging Arts Scene during Atlanta Celebrates Photography. She also participated in a solo show featuring her images of local Atlanta at Taste in Decatur.";
+				var about3 = "Traci's full portfolio can be seen by appointment or at one of the events listed here.";
+				$('div.content').html('<p>' + about1 + '</p><p>' + about2 + '</p><p>' + about3 + '</p>');
+				break;
+			case 'stores':
+				$('div.years').hide();
+
+				var s1 = 'You can find our products at the following locations';
+
+				$.ajax({
 					url: "/about/stores",
 					success: function(data) {
 						var content = '<br>';
 						jQuery.each(data, function(){
 							content += this.name + ' - ' + this.address + '</br>'
 						})
-						
-						x.replaceWith('<p>'+ s1 + '</p><p>' + content + '</p>')
+						console.log(content);
+						$('div.content').html('<p>'+ s1 + '</p><p>' + content + '</p>')
 					}
 				})
+				break;
+			case 'shows':
+				$('div.years').show();
+				
+				$('#2012').removeClass('selected');
+				$('#2011').removeClass('selected');
+				$('#2010').removeClass('selected');
+				$('#' + year).addClass('selected');
+
+				var showList = '<ul class="shows">';
+				var showContent = '';
+				var showLI = '<li class="show">';
+
+				$.ajax({
+						url: "/about/shows/" + year,
+						success: function(data) {
+							$.each(data, function() {
+								showContent += showLI + this.showDate + ' - ' + this.name + ' - ' + this.location + 
+								'<br><a href="' + this.link + '">' + this.link + '</a></li>';
+								})
+							$('div.content').html(showList + showContent + '</ul>');
+						}
+					})
+
+				$('div.content').html('<p>');
+				break;
+		}
+		
 	}
 	

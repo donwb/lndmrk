@@ -25,6 +25,12 @@ ShowProvider.prototype.getShows = function(callback){
 	})
 }
 
+ShowProvider.prototype.getShowsByYear = function(year, callback) {
+	Show.find({year: year}, function(err, shows) {
+		callback(null, shows);
+	})
+}
+
 ShowProvider.prototype.addShow = function(show, callback) {
 	var s = new Show();
 	s.showDate = show.date;
