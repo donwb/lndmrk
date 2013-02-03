@@ -52,6 +52,12 @@ body {
 	margin-top: -190px;
 }
 
+.tag-headline {
+    font-size: 25px;
+    margin: 0px 0px -30px 30px;
+    font-style: italic;
+}
+
 .detail {
 	color: black;
 }
@@ -165,7 +171,7 @@ body {
     padding: 5px 5px 5px 5px;
     text-decoration: none;
 }
-
+/*
 .products .type a:hover {
     padding: 5px 5px 5px 5px;
     background-color: #d7ceb2;
@@ -175,7 +181,7 @@ body {
     -moz-border-radius: 6px;
     border-radius: 6px;
 }
-
+*/
 .products .product-image {
     width: 100px;
     height: 100px;
@@ -230,4 +236,9 @@ body {
 }
 .products hr {
     margin: 8px 0 11px 0;
+}
+
+.stores {
+    font-size: 17px;
+    font-weight: bold;
 }

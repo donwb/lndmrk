@@ -30,7 +30,7 @@ ImageProvider.prototype.getImages = function(callback) {
 
 ImageProvider.prototype.pageImages = function(s, l, callback) {
     logger.info('paging images');
-    Img.find({}, ['name', 'description', 'filename', 'tags'] , {skip: s, limit: l}, function(err, images){
+    Img.find({}, ['name', 'description', 'filename', 'tags'] , {skip: s, limit: l, sort: {name: 1 }}, function(err, images){
         callback(null, images);
     })
 };

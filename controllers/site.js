@@ -50,7 +50,8 @@ exports.tagDetail = function(req, res){
             layout: true, locals: {
                 title: tagname + ' images',
                 tags: tags,
-                images: images
+                images: images,
+                tagname: tagname
             }
             });
         });

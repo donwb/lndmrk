@@ -43,7 +43,7 @@ script
 			case 'stores':
 				$('div.years').hide();
 
-				var s1 = 'You can find our products at the following locations';
+				var s1 = 'You can find our products at the following locations:';
 
 				$.ajax({
 					url: "/about/stores",
@@ -53,7 +53,7 @@ script
 							content += this.name + ' - ' + this.address + '</br>'
 						})
 						console.log(content);
-						$('div.content').html('<p>'+ s1 + '</p><p>' + content + '</p>')
+						$('div.content').html('<div class="stores">'+ s1 + '</div><p>' + content + '</p>')
 					}
 				})
 				break;
