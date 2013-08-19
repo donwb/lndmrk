@@ -12,12 +12,13 @@ div.row
 				div.type
 					a(href="#", onClick="javascript:replaceContent('stores');return false;") Stores
 				div.type
-					a(href="#", onClick="javascript:replaceContent('shows', 2012);return false;") Shows
+					a(href="#", onClick="javascript:replaceContent('shows', 2013);return false;") Shows
 		div(class="thirteen columns")
 			
 			div.offset-by-four
 				div.years
-						a(href="#", onClick="javascript:replaceContent('shows', 2012);return false;", class="selected", id="2012") 2012
+						a(href="#", onClick="javascript:replaceContent('shows', 2013);return false;", class="selected", id="2013") 2013
+						a(href="#", onClick="javascript:replaceContent('shows', 2012);return false;", id="2012") 2012
 						a(href="#", onClick="javascript:replaceContent('shows', 2011);return false;", id="2011") 2011
 						a(href="#", onClick="javascript:replaceContent('shows', 2010);return false;", id="2010") 2010
 						hr
@@ -60,6 +61,7 @@ script
 			case 'shows':
 				$('div.years').show();
 				
+				$('#2013').removeClass('selected');
 				$('#2012').removeClass('selected');
 				$('#2011').removeClass('selected');
 				$('#2010').removeClass('selected');

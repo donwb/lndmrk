@@ -19,6 +19,15 @@ body {
     text-align: center;
 }
 
+.phone-text {
+    font-size: 20px;
+    font-style: italic;
+    margin-top: 20px;
+    margin-left: -88px;
+    text-align: center;
+    color: white;
+}
+
 .nav-text a {
     color: #d7ceb2;
     padding: 5px 5px 5px 5px;
