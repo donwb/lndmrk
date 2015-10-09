@@ -1,4 +1,4 @@
-config = require('./../config');
+config = require('./../myconfig');
 var db = config.DatabaseConfig;
 
 

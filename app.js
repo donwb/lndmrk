@@ -1,5 +1,5 @@
 var express = require('express'),
-    config = require('./config'),
+    config = require('./myconfig'),
     mongoose = require('mongoose'),
     logger = require('winston');
 

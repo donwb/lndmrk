@@ -1,5 +1,5 @@
 var logger = require('winston');
-config = require('./../config');
+config = require('./../myconfig');
 var db = config.DatabaseConfig;
 
 var mongoose = require('mongoose');
