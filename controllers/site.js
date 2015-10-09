@@ -66,6 +66,7 @@ exports.index = function(req, res){
       logger.info('getting tags');
       TagProvider.getTags(function(err, tags) {
         logger.info('rendering viewe');
+        logger.info(images);
         res.render('index', { layout: true,
             locals: {
                 title: 'Landmark coasters',

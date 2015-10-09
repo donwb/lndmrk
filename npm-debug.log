@@ -1,0 +1,518 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.38
+4 warn package.json lndmrk@0.0.1-5 No README data
+5 verbose readDependencies using package.json deps
+6 verbose install where, deps [ '/Users/donwb/dev/lndmrk',
+6 verbose install   [ 'express', 'express-messages', 'jade', 'mongoose', 'winston' ] ]
+7 info preinstall lndmrk@0.0.1-5
+8 verbose readDependencies using package.json deps
+9 verbose cache add [ 'express@2.5.9', null ]
+10 verbose cache add name=undefined spec="express@2.5.9" args=["express@2.5.9",null]
+11 verbose parsed url { protocol: null,
+11 verbose parsed url   slashes: null,
+11 verbose parsed url   auth: null,
+11 verbose parsed url   host: null,
+11 verbose parsed url   port: null,
+11 verbose parsed url   hostname: null,
+11 verbose parsed url   hash: null,
+11 verbose parsed url   search: null,
+11 verbose parsed url   query: null,
+11 verbose parsed url   pathname: 'express@2.5.9',
+11 verbose parsed url   path: 'express@2.5.9',
+11 verbose parsed url   href: 'express@2.5.9' }
+12 verbose cache add [ 'express-messages@latest', null ]
+13 verbose cache add name=undefined spec="express-messages@latest" args=["express-messages@latest",null]
+14 verbose parsed url { protocol: null,
+14 verbose parsed url   slashes: null,
+14 verbose parsed url   auth: null,
+14 verbose parsed url   host: null,
+14 verbose parsed url   port: null,
+14 verbose parsed url   hostname: null,
+14 verbose parsed url   hash: null,
+14 verbose parsed url   search: null,
+14 verbose parsed url   query: null,
+14 verbose parsed url   pathname: 'express-messages@latest',
+14 verbose parsed url   path: 'express-messages@latest',
+14 verbose parsed url   href: 'express-messages@latest' }
+15 verbose cache add [ 'jade@~0.25.0', null ]
+16 verbose cache add name=undefined spec="jade@~0.25.0" args=["jade@~0.25.0",null]
+17 verbose parsed url { protocol: null,
+17 verbose parsed url   slashes: null,
+17 verbose parsed url   auth: null,
+17 verbose parsed url   host: null,
+17 verbose parsed url   port: null,
+17 verbose parsed url   hostname: null,
+17 verbose parsed url   hash: null,
+17 verbose parsed url   search: null,
+17 verbose parsed url   query: null,
+17 verbose parsed url   pathname: 'jade@~0.25.0',
+17 verbose parsed url   path: 'jade@~0.25.0',
+17 verbose parsed url   href: 'jade@~0.25.0' }
+18 verbose cache add [ 'mongoose@2.7.1', null ]
+19 verbose cache add name=undefined spec="mongoose@2.7.1" args=["mongoose@2.7.1",null]
+20 verbose parsed url { protocol: null,
+20 verbose parsed url   slashes: null,
+20 verbose parsed url   auth: null,
+20 verbose parsed url   host: null,
+20 verbose parsed url   port: null,
+20 verbose parsed url   hostname: null,
+20 verbose parsed url   hash: null,
+20 verbose parsed url   search: null,
+20 verbose parsed url   query: null,
+20 verbose parsed url   pathname: 'mongoose@2.7.1',
+20 verbose parsed url   path: 'mongoose@2.7.1',
+20 verbose parsed url   href: 'mongoose@2.7.1' }
+21 verbose cache add [ 'winston@0.6.2', null ]
+22 verbose cache add name=undefined spec="winston@0.6.2" args=["winston@0.6.2",null]
+23 verbose parsed url { protocol: null,
+23 verbose parsed url   slashes: null,
+23 verbose parsed url   auth: null,
+23 verbose parsed url   host: null,
+23 verbose parsed url   port: null,
+23 verbose parsed url   hostname: null,
+23 verbose parsed url   hash: null,
+23 verbose parsed url   search: null,
+23 verbose parsed url   query: null,
+23 verbose parsed url   pathname: 'winston@0.6.2',
+23 verbose parsed url   path: 'winston@0.6.2',
+23 verbose parsed url   href: 'winston@0.6.2' }
+24 verbose cache add name="express" spec="2.5.9" args=["express","2.5.9"]
+25 verbose parsed url { protocol: null,
+25 verbose parsed url   slashes: null,
+25 verbose parsed url   auth: null,
+25 verbose parsed url   host: null,
+25 verbose parsed url   port: null,
+25 verbose parsed url   hostname: null,
+25 verbose parsed url   hash: null,
+25 verbose parsed url   search: null,
+25 verbose parsed url   query: null,
+25 verbose parsed url   pathname: '2.5.9',
+25 verbose parsed url   path: '2.5.9',
+25 verbose parsed url   href: '2.5.9' }
+26 verbose addNamed [ 'express', '2.5.9' ]
+27 verbose addNamed [ '2.5.9', '2.5.9' ]
+28 verbose cache add name="express-messages" spec="latest" args=["express-messages","latest"]
+29 verbose parsed url { protocol: null,
+29 verbose parsed url   slashes: null,
+29 verbose parsed url   auth: null,
+29 verbose parsed url   host: null,
+29 verbose parsed url   port: null,
+29 verbose parsed url   hostname: null,
+29 verbose parsed url   hash: null,
+29 verbose parsed url   search: null,
+29 verbose parsed url   query: null,
+29 verbose parsed url   pathname: 'latest',
+29 verbose parsed url   path: 'latest',
+29 verbose parsed url   href: 'latest' }
+30 verbose addNamed [ 'express-messages', 'latest' ]
+31 verbose addNamed [ null, null ]
+32 verbose cache add name="jade" spec="~0.25.0" args=["jade","~0.25.0"]
+33 verbose parsed url { protocol: null,
+33 verbose parsed url   slashes: null,
+33 verbose parsed url   auth: null,
+33 verbose parsed url   host: null,
+33 verbose parsed url   port: null,
+33 verbose parsed url   hostname: null,
+33 verbose parsed url   hash: null,
+33 verbose parsed url   search: null,
+33 verbose parsed url   query: null,
+33 verbose parsed url   pathname: '~0.25.0',
+33 verbose parsed url   path: '~0.25.0',
+33 verbose parsed url   href: '~0.25.0' }
+34 verbose addNamed [ 'jade', '~0.25.0' ]
+35 verbose addNamed [ null, '>=0.25.0-0 <0.26.0-0' ]
+36 verbose cache add name="mongoose" spec="2.7.1" args=["mongoose","2.7.1"]
+37 verbose parsed url { protocol: null,
+37 verbose parsed url   slashes: null,
+37 verbose parsed url   auth: null,
+37 verbose parsed url   host: null,
+37 verbose parsed url   port: null,
+37 verbose parsed url   hostname: null,
+37 verbose parsed url   hash: null,
+37 verbose parsed url   search: null,
+37 verbose parsed url   query: null,
+37 verbose parsed url   pathname: '2.7.1',
+37 verbose parsed url   path: '2.7.1',
+37 verbose parsed url   href: '2.7.1' }
+38 verbose addNamed [ 'mongoose', '2.7.1' ]
+39 verbose addNamed [ '2.7.1', '2.7.1' ]
+40 verbose cache add name="winston" spec="0.6.2" args=["winston","0.6.2"]
+41 verbose parsed url { protocol: null,
+41 verbose parsed url   slashes: null,
+41 verbose parsed url   auth: null,
+41 verbose parsed url   host: null,
+41 verbose parsed url   port: null,
+41 verbose parsed url   hostname: null,
+41 verbose parsed url   hash: null,
+41 verbose parsed url   search: null,
+41 verbose parsed url   query: null,
+41 verbose parsed url   pathname: '0.6.2',
+41 verbose parsed url   path: '0.6.2',
+41 verbose parsed url   href: '0.6.2' }
+42 verbose addNamed [ 'winston', '0.6.2' ]
+43 verbose addNamed [ '0.6.2', '0.6.2' ]
+44 silly lockFile b342ec4f-express-2-5-9 express@2.5.9
+45 verbose lock express@2.5.9 /Users/donwb/.npm/b342ec4f-express-2-5-9.lock
+46 silly lockFile acb7cb4b-express-messages-latest express-messages@latest
+47 verbose lock express-messages@latest /Users/donwb/.npm/acb7cb4b-express-messages-latest.lock
+48 silly lockFile 94644e91-jade-0-25-0 jade@~0.25.0
+49 verbose lock jade@~0.25.0 /Users/donwb/.npm/94644e91-jade-0-25-0.lock
+50 silly lockFile d3418628-mongoose-2-7-1 mongoose@2.7.1
+51 verbose lock mongoose@2.7.1 /Users/donwb/.npm/d3418628-mongoose-2-7-1.lock
+52 silly lockFile 6b025e09-winston-0-6-2 winston@0.6.2
+53 verbose lock winston@0.6.2 /Users/donwb/.npm/6b025e09-winston-0-6-2.lock
+54 silly addNameRange { name: 'jade', range: '>=0.25.0-0 <0.26.0-0', hasData: false }
+55 info addNameTag [ 'express-messages', 'latest' ]
+56 verbose request where is /mongoose
+57 verbose request registry https://registry.npmjs.org/
+58 verbose request id 33528e5b00b12d76
+59 verbose url raw /mongoose
+60 verbose url resolving [ 'https://registry.npmjs.org/', './mongoose' ]
+61 verbose url resolved https://registry.npmjs.org/mongoose
+62 verbose request where is https://registry.npmjs.org/mongoose
+63 info trying registry request attempt 1 at 17:15:52
+64 http GET https://registry.npmjs.org/mongoose
+65 verbose request where is /express-messages
+66 verbose request registry https://registry.npmjs.org/
+67 verbose url raw /express-messages
+68 verbose url resolving [ 'https://registry.npmjs.org/', './express-messages' ]
+69 verbose url resolved https://registry.npmjs.org/express-messages
+70 verbose request where is https://registry.npmjs.org/express-messages
+71 info trying registry request attempt 1 at 17:15:52
+72 http GET https://registry.npmjs.org/express-messages
+73 verbose request where is /jade
+74 verbose request registry https://registry.npmjs.org/
+75 verbose url raw /jade
+76 verbose url resolving [ 'https://registry.npmjs.org/', './jade' ]
+77 verbose url resolved https://registry.npmjs.org/jade
+78 verbose request where is https://registry.npmjs.org/jade
+79 info trying registry request attempt 1 at 17:15:52
+80 verbose etag "2IDE9EEJFZO6BJBIIGAUUO8HN"
+81 http GET https://registry.npmjs.org/jade
+82 verbose request where is /winston
+83 verbose request registry https://registry.npmjs.org/
+84 verbose url raw /winston
+85 verbose url resolving [ 'https://registry.npmjs.org/', './winston' ]
+86 verbose url resolved https://registry.npmjs.org/winston
+87 verbose request where is https://registry.npmjs.org/winston
+88 info trying registry request attempt 1 at 17:15:52
+89 verbose etag "49U33EQQMF3D5KNRF6QCVU8T6"
+90 http GET https://registry.npmjs.org/winston
+91 verbose request where is /express
+92 verbose request registry https://registry.npmjs.org/
+93 verbose url raw /express
+94 verbose url resolving [ 'https://registry.npmjs.org/', './express' ]
+95 verbose url resolved https://registry.npmjs.org/express
+96 verbose request where is https://registry.npmjs.org/express
+97 info trying registry request attempt 1 at 17:15:52
+98 verbose etag "993HP51R7OU8AU4JMZBHUD0J4"
+99 http GET https://registry.npmjs.org/express
+100 http 200 https://registry.npmjs.org/winston
+101 silly registry.get cb [ 200,
+101 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+101 silly registry.get     etag: '"E1RZMLL3DFL8DGDX0ZJQHBMOU"',
+101 silly registry.get     'content-type': 'application/json',
+101 silly registry.get     'cache-control': 'max-age=60',
+101 silly registry.get     'content-length': '68523',
+101 silly registry.get     'accept-ranges': 'bytes',
+101 silly registry.get     date: 'Thu, 08 Oct 2015 21:15:53 GMT',
+101 silly registry.get     via: '1.1 varnish',
+101 silly registry.get     age: '23',
+101 silly registry.get     connection: 'keep-alive',
+101 silly registry.get     'x-served-by': 'cache-atl6224-ATL',
+101 silly registry.get     'x-cache': 'HIT',
+101 silly registry.get     'x-cache-hits': '1',
+101 silly registry.get     'x-timer': 'S1444338953.314908,VS0,VE2',
+101 silly registry.get     vary: 'Accept' } ]
+102 silly lockFile 65b3e88d-js-org-winston-winston-0-6-2-tgz https://registry.npmjs.org/winston/-/winston-0.6.2.tgz
+103 verbose lock https://registry.npmjs.org/winston/-/winston-0.6.2.tgz /Users/donwb/.npm/65b3e88d-js-org-winston-winston-0-6-2-tgz.lock
+104 verbose addRemoteTarball [ 'https://registry.npmjs.org/winston/-/winston-0.6.2.tgz',
+104 verbose addRemoteTarball   '4144fe2586cdc19a612bf8c035590132c9064bd2' ]
+105 info retry fetch attempt 1 at 17:15:53
+106 verbose fetch to= /var/folders/2_/m8yfk9dx34nd91y11x7nc1rw0000gn/T/npm-7452-P4zlrnNa/registry.npmjs.org/winston/-/winston-0.6.2.tgz
+107 http GET https://registry.npmjs.org/winston/-/winston-0.6.2.tgz
+108 http 200 https://registry.npmjs.org/jade
+109 silly registry.get cb [ 200,
+109 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+109 silly registry.get     etag: '"CG8C178CDY11V6AB2JHUZ30FQ"',
+109 silly registry.get     'content-type': 'application/json',
+109 silly registry.get     'cache-control': 'max-age=60',
+109 silly registry.get     'content-length': '147891',
+109 silly registry.get     'accept-ranges': 'bytes',
+109 silly registry.get     date: 'Thu, 08 Oct 2015 21:15:53 GMT',
+109 silly registry.get     via: '1.1 varnish',
+109 silly registry.get     age: '36',
+109 silly registry.get     connection: 'keep-alive',
+109 silly registry.get     'x-served-by': 'cache-atl6233-ATL',
+109 silly registry.get     'x-cache': 'HIT',
+109 silly registry.get     'x-cache-hits': '1',
+109 silly registry.get     'x-timer': 'S1444338953.294768,VS0,VE2',
+109 silly registry.get     vary: 'Accept' } ]
+110 silly addNameRange number 2 { name: 'jade', range: '>=0.25.0-0 <0.26.0-0', hasData: true }
+111 silly addNameRange versions [ 'jade',
+111 silly addNameRange   [ '0.0.1',
+111 silly addNameRange     '0.0.2',
+111 silly addNameRange     '0.1.0',
+111 silly addNameRange     '0.2.0',
+111 silly addNameRange     '0.2.1',
+111 silly addNameRange     '0.2.2',
+111 silly addNameRange     '0.2.3',
+111 silly addNameRange     '0.2.4',
+111 silly addNameRange     '0.3.0',
+111 silly addNameRange     '0.4.0',
+111 silly addNameRange     '0.4.1',
+111 silly addNameRange     '0.5.0',
+111 silly addNameRange     '0.5.1',
+111 silly addNameRange     '0.5.2',
+111 silly addNameRange     '0.5.3',
+111 silly addNameRange     '0.5.4',
+111 silly addNameRange     '0.5.5',
+111 silly addNameRange     '0.5.6',
+111 silly addNameRange     '0.5.7',
+111 silly addNameRange     '0.6.0',
+111 silly addNameRange     '0.6.1',
+111 silly addNameRange     '0.6.3',
+111 silly addNameRange     '0.7.0',
+111 silly addNameRange     '0.7.1',
+111 silly addNameRange     '0.8.0',
+111 silly addNameRange     '0.8.1',
+111 silly addNameRange     '0.8.2',
+111 silly addNameRange     '0.8.3',
+111 silly addNameRange     '0.8.4',
+111 silly addNameRange     '0.8.5',
+111 silly addNameRange     '0.8.6',
+111 silly addNameRange     '0.8.7',
+111 silly addNameRange     '0.8.8',
+111 silly addNameRange     '0.8.9',
+111 silly addNameRange     '0.9.0',
+111 silly addNameRange     '0.9.1',
+111 silly addNameRange     '0.9.2',
+111 silly addNameRange     '0.9.3',
+111 silly addNameRange     '0.10.0',
+111 silly addNameRange     '0.10.1',
+111 silly addNameRange     '0.10.2',
+111 silly addNameRange     '0.10.3',
+111 silly addNameRange     '0.10.4',
+111 silly addNameRange     '0.10.5',
+111 silly addNameRange     '0.10.6',
+111 silly addNameRange     '0.10.7',
+111 silly addNameRange     '0.11.0',
+111 silly addNameRange     '0.11.1',
+111 silly addNameRange     '0.12.0',
+111 silly addNameRange     '0.12.1',
+111 silly addNameRange     '0.12.2',
+111 silly addNameRange     '0.12.3',
+111 silly addNameRange     '0.12.4',
+111 silly addNameRange     '0.13.0',
+111 silly addNameRange     '0.14.0',
+111 silly addNameRange     '0.14.1',
+111 silly addNameRange     '0.14.2',
+111 silly addNameRange     '0.15.0',
+111 silly addNameRange     '0.15.1',
+111 silly addNameRange     '0.15.2',
+111 silly addNameRange     '0.15.3',
+111 silly addNameRange     '0.15.4',
+111 silly addNameRange     '0.16.0',
+111 silly addNameRange     '0.16.1',
+111 silly addNameRange     '0.16.2',
+111 silly addNameRange     '0.16.3',
+111 silly addNameRange     '0.16.4',
+111 silly addNameRange     '0.17.0',
+111 silly addNameRange     '0.18.0',
+111 silly addNameRange     '0.19.0',
+111 silly addNameRange     '0.20.0',
+111 silly addNameRange     '0.20.1',
+111 silly addNameRange     '0.20.2',
+111 silly addNameRange     '0.20.3',
+111 silly addNameRange     '0.21.0',
+111 silly addNameRange     '0.22.0',
+111 silly addNameRange     '0.22.1',
+111 silly addNameRange     '0.23.0',
+111 silly addNameRange     '0.24.0',
+111 silly addNameRange     '0.25.0',
+111 silly addNameRange     '0.26.0',
+111 silly addNameRange     '0.26.1',
+111 silly addNameRange     '0.26.2',
+111 silly addNameRange     '0.26.3',
+111 silly addNameRange     '0.27.0',
+111 silly addNameRange     '0.27.1',
+111 silly addNameRange     '0.27.2',
+111 silly addNameRange     '0.27.3',
+111 silly addNameRange     '0.27.4',
+111 silly addNameRange     '0.27.5',
+111 silly addNameRange     '0.27.6',
+111 silly addNameRange     '0.27.7',
+111 silly addNameRange     '0.28.0',
+111 silly addNameRange     '0.28.1',
+111 silly addNameRange     '0.28.2',
+111 silly addNameRange     '0.29.0',
+111 silly addNameRange     '0.30.0',
+111 silly addNameRange     '0.31.0',
+111 silly addNameRange     '0.31.1',
+111 silly addNameRange     '0.31.2',
+111 silly addNameRange     '0.32.0',
+111 silly addNameRange     '0.33.0',
+111 silly addNameRange     '0.34.0',
+111 silly addNameRange     '0.34.1',
+111 silly addNameRange     '0.35.0',
+111 silly addNameRange     '1.0.0',
+111 silly addNameRange     '1.0.1',
+111 silly addNameRange     '1.0.2',
+111 silly addNameRange     '1.1.0',
+111 silly addNameRange     '1.1.1',
+111 silly addNameRange     '1.1.2',
+111 silly addNameRange     '1.1.3',
+111 silly addNameRange     '1.1.4',
+111 silly addNameRange     '1.1.5',
+111 silly addNameRange     '1.2.0',
+111 silly addNameRange     '1.3.0',
+111 silly addNameRange     '1.3.1',
+111 silly addNameRange     '1.4.0',
+111 silly addNameRange     '1.4.1',
+111 silly addNameRange     '1.4.2',
+111 silly addNameRange     '1.5.0',
+111 silly addNameRange     '1.6.0',
+111 silly addNameRange     '1.7.0',
+111 silly addNameRange     '1.8.0',
+111 silly addNameRange     '1.8.1',
+111 silly addNameRange     '1.8.2',
+111 silly addNameRange     '1.9.0',
+111 silly addNameRange     '1.9.1',
+111 silly addNameRange     '1.9.2',
+111 silly addNameRange     '1.10.0',
+111 silly addNameRange     '1.11.0' ] ]
+112 verbose addNamed [ 'jade', '0.25.0' ]
+113 verbose addNamed [ '0.25.0', '0.25.0' ]
+114 silly lockFile c117791a-jade-0-25-0 jade@0.25.0
+115 verbose lock jade@0.25.0 /Users/donwb/.npm/c117791a-jade-0-25-0.lock
+116 silly lockFile 39938550-y-npmjs-org-jade-jade-0-25-0-tgz https://registry.npmjs.org/jade/-/jade-0.25.0.tgz
+117 verbose lock https://registry.npmjs.org/jade/-/jade-0.25.0.tgz /Users/donwb/.npm/39938550-y-npmjs-org-jade-jade-0-25-0-tgz.lock
+118 verbose addRemoteTarball [ 'https://registry.npmjs.org/jade/-/jade-0.25.0.tgz',
+118 verbose addRemoteTarball   'a59f2f4e07aa3ff8a6ce2e759ef039866864a1ae' ]
+119 info retry fetch attempt 1 at 17:15:53
+120 verbose fetch to= /var/folders/2_/m8yfk9dx34nd91y11x7nc1rw0000gn/T/npm-7452-P4zlrnNa/registry.npmjs.org/jade/-/jade-0.25.0.tgz
+121 http GET https://registry.npmjs.org/jade/-/jade-0.25.0.tgz
+122 http 200 https://registry.npmjs.org/mongoose
+123 silly registry.get cb [ 200,
+123 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+123 silly registry.get     etag: '"357A8CFTDYO73HXTR9RE6TD3E"',
+123 silly registry.get     'content-type': 'application/json',
+123 silly registry.get     'cache-control': 'max-age=60',
+123 silly registry.get     'content-length': '364634',
+123 silly registry.get     'accept-ranges': 'bytes',
+123 silly registry.get     date: 'Thu, 08 Oct 2015 21:15:53 GMT',
+123 silly registry.get     via: '1.1 varnish',
+123 silly registry.get     age: '46',
+123 silly registry.get     connection: 'keep-alive',
+123 silly registry.get     'x-served-by': 'cache-atl6233-ATL',
+123 silly registry.get     'x-cache': 'HIT',
+123 silly registry.get     'x-cache-hits': '1',
+123 silly registry.get     'x-timer': 'S1444338953.286931,VS0,VE4',
+123 silly registry.get     vary: 'Accept' } ]
+124 silly lockFile 854736dc--org-mongoose-mongoose-2-7-1-tgz https://registry.npmjs.org/mongoose/-/mongoose-2.7.1.tgz
+125 verbose lock https://registry.npmjs.org/mongoose/-/mongoose-2.7.1.tgz /Users/donwb/.npm/854736dc--org-mongoose-mongoose-2-7-1-tgz.lock
+126 verbose addRemoteTarball [ 'https://registry.npmjs.org/mongoose/-/mongoose-2.7.1.tgz',
+126 verbose addRemoteTarball   'ecdb505f98623cf835dea3cbaca48b6f337a4bba' ]
+127 info retry fetch attempt 1 at 17:15:54
+128 verbose fetch to= /var/folders/2_/m8yfk9dx34nd91y11x7nc1rw0000gn/T/npm-7452-P4zlrnNa/registry.npmjs.org/mongoose/-/mongoose-2.7.1.tgz
+129 http GET https://registry.npmjs.org/mongoose/-/mongoose-2.7.1.tgz
+130 http 200 https://registry.npmjs.org/express-messages
+131 silly registry.get cb [ 200,
+131 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+131 silly registry.get     etag: '"CHDNLFQX9KH51WAZWTMXYE59V"',
+131 silly registry.get     'content-type': 'application/json',
+131 silly registry.get     'cache-control': 'max-age=60',
+131 silly registry.get     'content-length': '6560',
+131 silly registry.get     'accept-ranges': 'bytes',
+131 silly registry.get     date: 'Thu, 08 Oct 2015 21:15:53 GMT',
+131 silly registry.get     via: '1.1 varnish',
+131 silly registry.get     age: '0',
+131 silly registry.get     connection: 'keep-alive',
+131 silly registry.get     'x-served-by': 'cache-atl6222-ATL',
+131 silly registry.get     'x-cache': 'MISS',
+131 silly registry.get     'x-cache-hits': '0',
+131 silly registry.get     'x-timer': 'S1444338953.299876,VS0,VE120',
+131 silly registry.get     vary: 'Accept' } ]
+132 verbose addNamed [ 'express-messages', '1.0.0' ]
+133 verbose addNamed [ '1.0.0', '1.0.0' ]
+134 silly lockFile 0d8cb4b4-express-messages-1-0-0 express-messages@1.0.0
+135 verbose lock express-messages@1.0.0 /Users/donwb/.npm/0d8cb4b4-express-messages-1-0-0.lock
+136 silly lockFile 125371cc-sages-express-messages-1-0-0-tgz https://registry.npmjs.org/express-messages/-/express-messages-1.0.0.tgz
+137 verbose lock https://registry.npmjs.org/express-messages/-/express-messages-1.0.0.tgz /Users/donwb/.npm/125371cc-sages-express-messages-1-0-0-tgz.lock
+138 verbose addRemoteTarball [ 'https://registry.npmjs.org/express-messages/-/express-messages-1.0.0.tgz',
+138 verbose addRemoteTarball   'dfa014cff77996decb13038c8f147d41dcdfdab3' ]
+139 info retry fetch attempt 1 at 17:15:54
+140 verbose fetch to= /var/folders/2_/m8yfk9dx34nd91y11x7nc1rw0000gn/T/npm-7452-P4zlrnNa/registry.npmjs.org/express-messages/-/express-messages-1.0.0.tgz
+141 http GET https://registry.npmjs.org/express-messages/-/express-messages-1.0.0.tgz
+142 http 200 https://registry.npmjs.org/winston/-/winston-0.6.2.tgz
+143 silly lockFile 65b3e88d-js-org-winston-winston-0-6-2-tgz https://registry.npmjs.org/winston/-/winston-0.6.2.tgz
+144 silly lockFile 65b3e88d-js-org-winston-winston-0-6-2-tgz https://registry.npmjs.org/winston/-/winston-0.6.2.tgz
+145 silly lockFile 6b025e09-winston-0-6-2 winston@0.6.2
+146 silly lockFile 6b025e09-winston-0-6-2 winston@0.6.2
+147 http 200 https://registry.npmjs.org/jade/-/jade-0.25.0.tgz
+148 silly lockFile 39938550-y-npmjs-org-jade-jade-0-25-0-tgz https://registry.npmjs.org/jade/-/jade-0.25.0.tgz
+149 silly lockFile 39938550-y-npmjs-org-jade-jade-0-25-0-tgz https://registry.npmjs.org/jade/-/jade-0.25.0.tgz
+150 silly lockFile c117791a-jade-0-25-0 jade@0.25.0
+151 silly lockFile c117791a-jade-0-25-0 jade@0.25.0
+152 silly lockFile 94644e91-jade-0-25-0 jade@~0.25.0
+153 silly lockFile 94644e91-jade-0-25-0 jade@~0.25.0
+154 http 200 https://registry.npmjs.org/express-messages/-/express-messages-1.0.0.tgz
+155 silly lockFile 125371cc-sages-express-messages-1-0-0-tgz https://registry.npmjs.org/express-messages/-/express-messages-1.0.0.tgz
+156 silly lockFile 125371cc-sages-express-messages-1-0-0-tgz https://registry.npmjs.org/express-messages/-/express-messages-1.0.0.tgz
+157 silly lockFile 0d8cb4b4-express-messages-1-0-0 express-messages@1.0.0
+158 silly lockFile 0d8cb4b4-express-messages-1-0-0 express-messages@1.0.0
+159 silly lockFile acb7cb4b-express-messages-latest express-messages@latest
+160 silly lockFile acb7cb4b-express-messages-latest express-messages@latest
+161 http 200 https://registry.npmjs.org/mongoose/-/mongoose-2.7.1.tgz
+162 http 200 https://registry.npmjs.org/express
+163 silly registry.get cb [ 200,
+163 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+163 silly registry.get     etag: '"8LVCJV70MHHBQS6U4JDQF1IQ9"',
+163 silly registry.get     'content-type': 'application/json',
+163 silly registry.get     'cache-control': 'max-age=60',
+163 silly registry.get     'content-length': '527385',
+163 silly registry.get     'accept-ranges': 'bytes',
+163 silly registry.get     date: 'Thu, 08 Oct 2015 21:15:53 GMT',
+163 silly registry.get     via: '1.1 varnish',
+163 silly registry.get     age: '41',
+163 silly registry.get     connection: 'keep-alive',
+163 silly registry.get     'x-served-by': 'cache-atl6232-ATL',
+163 silly registry.get     'x-cache': 'HIT',
+163 silly registry.get     'x-cache-hits': '1',
+163 silly registry.get     'x-timer': 'S1444338953.299178,VS0,VE9',
+163 silly registry.get     vary: 'Accept' } ]
+164 silly lockFile a0e4e45e-js-org-express-express-2-5-9-tgz https://registry.npmjs.org/express/-/express-2.5.9.tgz
+165 verbose lock https://registry.npmjs.org/express/-/express-2.5.9.tgz /Users/donwb/.npm/a0e4e45e-js-org-express-express-2-5-9-tgz.lock
+166 verbose addRemoteTarball [ 'https://registry.npmjs.org/express/-/express-2.5.9.tgz',
+166 verbose addRemoteTarball   '62d111ccaccf425182e1f30e541f84b551a72f2c' ]
+167 info retry fetch attempt 1 at 17:15:54
+168 verbose fetch to= /var/folders/2_/m8yfk9dx34nd91y11x7nc1rw0000gn/T/npm-7452-P4zlrnNa/registry.npmjs.org/express/-/express-2.5.9.tgz
+169 http GET https://registry.npmjs.org/express/-/express-2.5.9.tgz
+170 silly lockFile 854736dc--org-mongoose-mongoose-2-7-1-tgz https://registry.npmjs.org/mongoose/-/mongoose-2.7.1.tgz
+171 silly lockFile 854736dc--org-mongoose-mongoose-2-7-1-tgz https://registry.npmjs.org/mongoose/-/mongoose-2.7.1.tgz
+172 silly lockFile d3418628-mongoose-2-7-1 mongoose@2.7.1
+173 silly lockFile d3418628-mongoose-2-7-1 mongoose@2.7.1
+174 http 200 https://registry.npmjs.org/express/-/express-2.5.9.tgz
+175 silly lockFile a0e4e45e-js-org-express-express-2-5-9-tgz https://registry.npmjs.org/express/-/express-2.5.9.tgz
+176 silly lockFile a0e4e45e-js-org-express-express-2-5-9-tgz https://registry.npmjs.org/express/-/express-2.5.9.tgz
+177 silly lockFile b342ec4f-express-2-5-9 express@2.5.9
+178 silly lockFile b342ec4f-express-2-5-9 express@2.5.9
+179 error Error: EACCES, mkdir '/Users/donwb/.npm/winston/0.6.2'
+179 error  { [Error: EACCES, mkdir '/Users/donwb/.npm/winston/0.6.2']
+179 error   errno: 3,
+179 error   code: 'EACCES',
+179 error   path: '/Users/donwb/.npm/winston/0.6.2',
+179 error   parent: 'lndmrk' }
+180 error Please try running this command again as root/Administrator.
+181 error System Darwin 15.0.0
+182 error command "node" "/usr/local/bin/npm" "install"
+183 error cwd /Users/donwb/dev/lndmrk
+184 error node -v v0.10.38
+185 error npm -v 1.4.28
+186 error path /Users/donwb/.npm/winston/0.6.2
+187 error code EACCES
+188 error errno 3
+189 error stack Error: EACCES, mkdir '/Users/donwb/.npm/winston/0.6.2'
+190 verbose exit [ 3, true ]
